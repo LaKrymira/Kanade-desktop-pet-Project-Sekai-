@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>宵崎奏</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="desktop-pet" id="desktopPet">
+      <section class="panel" id="panel" aria-hidden="true">
+        <header class="panel__header">
+          <div>
+            <p class="eyebrow">NIGHTCORD</p>
+            <h1>宵崎 奏</h1>
+          </div>
+          <button class="icon-button" id="closePanel" aria-label="收起面板">×</button>
+        </header>
+        <p class="status"><span></span><b id="statusText">正在创作中</b></p>
+        <div class="quote" id="quote">“还差一点……这首歌就能完成了。”</div>
+        <div class="actions">
+          <button class="talk-button" data-action="talk">和奏说话</button>
+          <button data-action="manual-sleep">睡觉</button>
+          <button data-action="manual-eat">吃饭</button>
+          <div class="size-controls">
+            <span>角色尺寸 <b id="sizeLabel">标准</b></span>
+            <button data-action="size-down" aria-label="缩小角色">− 缩小</button>
+            <button data-action="size-up" aria-label="增大角色">＋ 增大</button>
+          </div>
+          <button class="update-button" data-action="update">安装本地更新</button>
+        </div>
+        <p class="update-status" id="updateStatus" aria-live="polite"></p>
+        <footer>
+          <span id="versionLabel">版本读取中…</span>
+          <button class="quit" id="quit">退出</button>
+        </footer>
+      </section>
+
+      <div class="speech" id="speech" role="status">今天也要好好吃饭。</div>
+      <div class="character" id="character" title="单击互动 · 双击打开面板 · 拖动移动">
+        <div class="character__glow"></div>
+        <img class="sprite sprite--awake" src="../../assets/kanade.png" alt="宵崎奏" draggable="false" />
+        <img class="sprite sprite--sleep" src="../../assets/kanade-yoisaki.png" alt="闭眼的宵崎奏" draggable="false" />
+        <img class="sprite sprite--drag" src="../../assets/kanade-drag.png" alt="被提起的宵崎奏" draggable="false" />
+        <img class="sprite idle-frame idle-sleep-frame" data-frame="1" src="../../assets/kanade-sleep-frame-1.png" alt="准备睡觉的宵崎奏" draggable="false" />
+        <img class="sprite idle-frame idle-sleep-frame" data-frame="2" src="../../assets/kanade-sleep-frame-2.png" alt="拉起被子的宵崎奏" draggable="false" />
+        <img class="sprite idle-frame idle-sleep-frame" data-frame="3" src="../../assets/kanade-idle-sleep.png" alt="盖着被子睡觉的宵崎奏" draggable="false" />
+        <img class="sprite idle-frame idle-eat-frame" data-frame="1" src="../../assets/kanade-eat-frame-1.png" alt="拿出合味道杯面的宵崎奏" draggable="false" />
+        <img class="sprite idle-frame idle-eat-frame" data-frame="2" src="../../assets/kanade-eat-frame-2.png" alt="夹起面条的宵崎奏" draggable="false" />
+        <img class="sprite idle-frame idle-eat-frame" data-frame="3" src="../../assets/kanade-idle-eat.png" alt="吃合味道杯面的宵崎奏" draggable="false" />
+        <div class="sleep-zzzs" aria-hidden="true"><i>Z</i><i>Z</i><i>Z</i></div>
+      </div>
+      <button class="name-tag" id="openPanel">宵崎奏 <span>···</span></button>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>

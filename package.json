@@ -1,0 +1,51 @@
+{
+  "name": "kanade-desktop-pet",
+  "version": "0.5.1",
+  "description": "宵崎奏桌宠",
+  "productName": "宵崎奏桌宠",
+  "author": "Kanade Desktop Pet",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "package:mac": "electron-builder --mac dir dmg --arm64"
+  },
+  "devDependencies": {
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.kanade.desktop-pet",
+    "productName": "宵崎奏桌宠",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/kanade.png",
+      "assets/kanade-yoisaki.png",
+      "assets/kanade-drag.png",
+      "assets/kanade-idle-sleep.png",
+      "assets/kanade-idle-eat.png",
+      "assets/kanade-sleep-frame-1.png",
+      "assets/kanade-sleep-frame-2.png",
+      "assets/kanade-eat-frame-1.png",
+      "assets/kanade-eat-frame-2.png",
+      "package.json"
+    ],
+    "mac": {
+      "icon": "assets/kanade.png",
+      "category": "public.app-category.entertainment",
+      "target": [
+        "dir",
+        "dmg"
+      ],
+      "identity": null
+    },
+    "dmg": {
+      "title": "宵崎奏桌宠",
+      "artifactName": "宵崎奏桌宠-${version}-${arch}.${ext}"
+    }
+  }
+}
